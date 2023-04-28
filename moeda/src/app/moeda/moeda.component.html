@@ -1,0 +1,60 @@
+<nav class="navbar navbar-dark fixed-top" style="background-color: black;">
+    <div class="container" style="background-color: black;">
+      <a class="navbar-brand" href="#">
+        <img src="https://cdn.discordapp.com/attachments/884050769618288711/1027098239209582662/FEDGIF.gif" width="80" height="80">
+      </a>
+    </div>
+  </nav>
+
+<br>
+<br>
+<br><br><br><br>
+<div class="container-md">
+<main class="form-signin w-100 m-auto">
+<form>
+<h1 class="h3 mb-3 fw-normal text-center" id="cobra">Conversor de Moeda</h1>
+<br>
+<h5 class="text-center">
+   Insira o valor das moedas em comparação ao real
+  </h5>
+<div class="form-floating">
+  <input type="number" class="form-control" id="taxaLibra" [(ngModel)]="taxaLibra" name="taxaLibra">
+  <label>Libra/GBP</label>
+</div>
+<br>
+<div class="form-floating">
+  <input type="number" class="form-control" id="taxaDolar" [(ngModel)]="taxaDolar" name="taxaDolar">
+  <label>Dólar/USD</label>
+</div>
+<br>
+<div class="form-floating">
+  <input type="number" class="form-control" id="taxaEuro" [(ngModel)]="taxaEuro" name="taxaEuro">
+  <label>Euro/EUR</label>
+</div>
+<br><br>
+<h6 >Valor a ser convertido.</h6>
+<div class="form-floating">
+  <input type="number" class="form-control" id="valorReal" [(ngModel)]="valorReal" name="valorReal">
+  <label>Real/BRL</label>
+</div>
+
+
+<div *ngIf="resultado">
+  <br>
+  <p class="text-dark">Valor em Dólares: {{resultado.dolar}}</p>
+  <p class="text-dark">Valor em Euros: {{resultado.euro}}</p>
+  <p class="text-dark">Valor em Libras Esterlinas: {{resultado.libra}}</p>
+  <br>
+</div>
+
+
+<button class="w-100 btn btn-lg btn-primary" (click)="converter()" style="margin-top: 30px;">Converter</button>
+
+
+
+
+</form>
+<br>
+
+</main>
+</div> 
